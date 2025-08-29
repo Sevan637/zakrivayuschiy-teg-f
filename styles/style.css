@@ -31,7 +31,7 @@
 .header {
   min-block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
   margin: 100px auto;
-  border: 2px solid var(--main-color);
+  border: var(--border);
 }
 
 .logo {
@@ -42,5 +42,12 @@
 }
 
 .main {
-  margin: 0 auto 52px;
+  margin: 0 auto;
+}
+
+.card {
+  display: grid;
+  gap: 25px;
+  border: var(--border);
+
 }

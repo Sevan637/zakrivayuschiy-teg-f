@@ -10,4 +10,5 @@
   --section-inline-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
   --background-color: #fff; 
   --main-color: #000; 
+  --border: 2px solid var(--main-color);
 }
