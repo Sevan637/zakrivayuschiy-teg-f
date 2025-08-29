@@ -7,5 +7,7 @@
   --background-gradient: repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
   repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
   repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-  --section-inline-size: clamp(1rem, -0.0563rem + 4.5070vw, 4rem);
+  --section-inline-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  --background-color: #fff; 
+  --main-color: #000; 
 }

@@ -23,12 +23,20 @@
   min-inline-size: 375px; 
 }
 
+.header, .main {
+  background-color: var(--background-color);
+}
+
 .header {
   inline-size: var(--section-inline-size);
+  min-block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
+  margin: 100px auto;
+  border: 2px solid var(--main-color);
 }
 
 .logo {
-  display: inline-block;
-  inline-size: clamp(1rem, -8.1875rem + 42.8571vw, 4rem);
-
+  display: block;
+  inline-size: clamp(21.438rem, 18.973rem + 10.52vw, 28.438rem);
+  block-size: clamp(5.188rem, 4.637rem + 2.35vw, 6.75rem);
+  margin: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem) auto;
 }
