@@ -4,4 +4,8 @@
   --Inter-Variable: 'Inter-Variable.woff2';
   --text-weight: 410;
   --heading-weight: 715;
+  --background-gradient: repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
+  repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+  repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  --section-inline-size: clamp(1rem, -0.0563rem + 4.5070vw, 4rem);
 }

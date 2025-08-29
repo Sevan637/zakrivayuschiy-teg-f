@@ -15,12 +15,20 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--text-weight);
-  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
-  repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-  repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-  
+  background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+  min-inline-size: 375px; 
+}
+
+.header {
+  inline-size: var(--section-inline-size);
+}
+
+.logo {
+  display: inline-block;
+  inline-size: clamp(1rem, -8.1875rem + 42.8571vw, 4rem);
+
 }
