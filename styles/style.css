@@ -70,10 +70,10 @@
   inline-size: 100%;
 }
 
-.text-label {
+.text__label {
   position: absolute;
   display: inline-block;
-  font-family: 'PressStart2P-Regular.woff', sans-serif;
+  font-family: var(--PressStart2P-Regular), sans-serif;
   font-size: var(--custom-font-size);
   right: 25px;
   top: 25px;
@@ -86,9 +86,41 @@
   0 -1px #FFFFFF;
 }
 
+@supports((text-stroke: 1px #FFFFFF) or (-webkit-text-stroke: 1px #FFFFFF)) {
+  .text__label {
+    -webkit-text-stroke: 1px #FFFFFF;
+    text-stroke: 1px #FFFFFF;
+    text-shadow: none;
+  }
+} 
+
 .text-section {
   margin: 25px;
   display: grid;
   gap: 25px;
 }
 
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.card__like-button {
+  all: initial;
+  inline-size: 130px;
+  block-size: 38px;
+  border: 2px solid #000;
+}
+
+.card__icon-button {
+  all: initial; 
+  
+}
+
+.button__text {
+  display: inline-block;
+  font-family: var(--PressStart2P-Regular), sans-serif;
+  font-size: var(--custom-font-size);
+  margin: 12.5px 37px; 
+}
