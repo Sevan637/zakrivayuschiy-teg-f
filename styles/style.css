@@ -24,7 +24,6 @@
 }
 
 .header, .main {
-  background-color: var(--background-color);
   inline-size: var(--section-inline-size);
 }
 
@@ -32,6 +31,7 @@
   min-block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
   margin: 100px auto;
   border: var(--border);
+  background-color: var(--background-color);
 }
 
 .logo {
@@ -46,8 +46,25 @@
 }
 
 .card {
+  border: var(--border);
+  background-color: var(--background-color);
+}
+
+.card:not(:last-of-type) {
+  margin-bottom: 54px;
+}
+
+.picture-box {
+  position: relative;
+}
+
+.card-picture {
+  inline-size: 100%;
+}
+
+.text-section {
+  margin: 25px;
   display: grid;
   gap: 25px;
-  border: var(--border);
-
 }
+
