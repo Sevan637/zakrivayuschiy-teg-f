@@ -11,7 +11,7 @@
 */
 
 .page {
-  font-family: var(--Inter-Variable);
+  font-family: var(--Inter-Variable), sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--text-weight);
@@ -21,6 +21,7 @@
   background-repeat: no-repeat;
   background-position: center;
   min-inline-size: 375px; 
+  font-size: var(--font-size);
 }
 
 .header, .main {
@@ -54,12 +55,34 @@
   margin-bottom: 54px;
 }
 
+.card-title {
+  font-variation-settings: 'wght' var(--heading-weight);
+  margin: 4px 10px;
+}
+  
+
 .picture-box {
   position: relative;
 }
 
 .card-picture {
   inline-size: 100%;
+}
+
+.logo-label {
+  all: initial;
+  display: inline;
+  position: absolute;
+  inline-size: 98px;
+  right: 25px;
+  top: 25px;
+  opacity: 50%;
+  mix-blend-mode: hard-light;
+  text-shadow:
+  -1px 0 #FFFFFF, 
+  0 1px #FFFFFF, 
+  1px 0 #FFFFFF, 
+  0 -1px #FFFFFF;
 }
 
 .text-section {

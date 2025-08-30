@@ -4,11 +4,14 @@
   --Inter-Variable: 'Inter-Variable.woff2';
   --text-weight: 410;
   --heading-weight: 715;
+  --standart-font-size: 18px;
+  --custom-font-size: 14px;
   --background-gradient: repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
   repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-  repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
   --section-inline-size: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
   --background-color: #fff; 
   --main-color: #000; 
   --border: 2px solid var(--main-color);
+  
 }
