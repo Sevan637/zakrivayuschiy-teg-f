@@ -26,6 +26,7 @@
 
 .header, .main {
   inline-size: var(--section-inline-size);
+
 }
 
 .header {
@@ -69,11 +70,11 @@
   inline-size: 100%;
 }
 
-.logo-label {
-  all: initial;
-  display: inline;
+.text-label {
   position: absolute;
-  inline-size: 98px;
+  display: inline-block;
+  font-family: 'PressStart2P-Regular.woff', sans-serif;
+  font-size: var(--custom-font-size);
   right: 25px;
   top: 25px;
   opacity: 50%;
