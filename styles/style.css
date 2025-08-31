@@ -123,6 +123,40 @@ footer {
   margin: 12.5px 37px;
 }
 
+.fear {
+  filter: brightness(50%) contrast(200%) saturate(250%);
+}
+
+.victory {
+  filter: brightness(150%) saturate(200%);
+}
+
+.perfect {
+   filter: brightness(1000%) contrast(1000%) saturate(1000%);
+}
+
+.friends {
+  filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(30deg);
+}
+
+.ideas {
+filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180deg);
+
+}
+
+.desperation {
+ filter: brightness(150%) saturate(200%) hue-rotate(-90deg) sepia(80%) grayscale(0.4);
+}
+
+.road {
+  filter: brightness(1000%) blur(5px) contrast(1000%) saturate(1000%) invert(0.7);
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+}
+
 .save-button {
   all: initial;
   border: var(--border);
@@ -134,10 +168,6 @@ footer {
   background-color: var(--background-color);
 }
 
-.footer {
-  display: grid;
-  justify-content: center;
-}
 .save-button .floppy-logo {
   inline-size: 28px;
   block-size: 28px;
@@ -178,3 +208,8 @@ footer {
   margin: auto auto 30px;
 }
 
+@media (width <= 375px) {
+  .save-button {
+    flex-direction: column;
+  }
+}
