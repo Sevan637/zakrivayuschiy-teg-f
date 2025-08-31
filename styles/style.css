@@ -109,6 +109,34 @@ footer {
   border: var(--border);
 }
 
+.transition-style {
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+
+.transition-style::after {
+  content: '';
+  display: block;
+  background-color: var(--main-color);
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+  inset: 0;
+  scale: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.transition-style::after:hover {
+  transform: scale(1);
+}
+
+.transition-style:focus {
+  
+  box-shadow: 2px 2px var(--main-color);
+
+}
+
 .card__icon-button {
   all: initial;
 }
