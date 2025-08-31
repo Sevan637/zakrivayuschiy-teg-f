@@ -136,7 +136,7 @@ footer {
 }
 
 .friends {
-  filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(30deg);
+  filter: brightness(140%) blur(3px) contrast(110%) saturate(120%) hue-rotate(30deg);
 }
 
 .ideas {
