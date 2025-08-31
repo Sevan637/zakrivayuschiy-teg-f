@@ -121,7 +121,6 @@ footer {
 
 .transition-style::after {
   content: '';
-  display: inline-block;
   background-color: var(--main-color);
   position: absolute;
   inset: 0;
