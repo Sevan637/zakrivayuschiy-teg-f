@@ -14,7 +14,7 @@
   font-family: var(--Inter-Variable), sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight);
   background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -23,9 +23,10 @@
   font-size: var(--font-size);
 }
 
-.header, .main, footer {
+.header,
+.main,
+footer {
   inline-size: var(--section-inline-size);
-
 }
 
 .header {
@@ -42,7 +43,8 @@
   margin: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem) auto;
 }
 
-.main, .footer {
+.main,
+.footer {
   margin: 0 auto;
 }
 
@@ -56,10 +58,9 @@
 }
 
 .card-title {
-  font-variation-settings: 'wght' var(--heading-weight);
+  font-variation-settings: "wght" var(--heading-weight);
   margin: 4px 10px;
 }
-  
 
 .picture-box {
   position: relative;
@@ -78,20 +79,16 @@
   top: 25px;
   opacity: 50%;
   mix-blend-mode: hard-light;
-  text-shadow:
-  -1px 0 #FFFFFF, 
-  0 1px #FFFFFF, 
-  1px 0 #FFFFFF, 
-  0 -1px #FFFFFF;
+  text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
 }
 
-@supports((text-stroke: 1px #FFFFFF) or (-webkit-text-stroke: 1px #FFFFFF)) {
+@supports ((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
   .text__label {
-    -webkit-text-stroke: 1px #FFFFFF;
-    text-stroke: 1px #FFFFFF;
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
     text-shadow: none;
   }
-} 
+}
 
 .text-section {
   margin: 25px;
@@ -113,7 +110,7 @@
 }
 
 .card__icon-button {
-  all: initial; 
+  all: initial;
 }
 
 .button__text {
@@ -123,11 +120,11 @@
 }
 
 .card__like-button .button__text {
-  margin: 12.5px 37px; 
+  margin: 12.5px 37px;
 }
 
 .save-button {
-  all: initial; 
+  all: initial;
   border: var(--border);
   margin: 52px auto 100px;
   display: flex;
@@ -135,14 +132,49 @@
   gap: 8px;
   padding: 20px 17px;
   background-color: var(--background-color);
-  
 }
 
 .footer {
   display: grid;
   justify-content: center;
 }
-.floppy-logo {
+.save-button .floppy-logo {
   inline-size: 28px;
   block-size: 28px;
 }
+
+.save-dialog {
+  inline-size: 353px;
+  padding: 0;
+  border: var(--border);
+}
+
+.save-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dialog-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 30px;
+  justify-content: center;
+}
+
+.dialog-info .floppy-logo {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.save-dialog-button {
+  all: initial; 
+  border: var(--border);
+  inline-size: 293px;
+  block-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto 30px;
+}
+

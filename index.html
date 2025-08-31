@@ -248,9 +248,9 @@
                 <path d="M15 21H12V24H15V21Z" fill="black" />
               </svg>
             </button>
-          <button class="card__like-button">
-            <span class="button__text">Like</span>
-          </button>
+            <button class="card__like-button">
+              <span class="button__text">Like</span>
+            </button>
           </div>
         </div>
       </section>
@@ -485,27 +485,32 @@
     </main>
 
     <footer class="footer">
-      <button class="save-button" 
-      type="button" 
-    onclick="window['save-dialog-id'].showModal()" 
-    aria-controls="save-dialog-id">
+      <button
+        class="save-button"
+        type="button"
+        onclick="window['save-dialog-id'].showModal()"
+        aria-controls="save-dialog-id"
+      >
         <svg class="floppy-logo" viewBox="0 0 39 39">
-  <use href="./svg/floppy.svg#floppy"></use>
-</svg>
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
 
       <dialog id="save-dialog-id" class="save-dialog">
-      <div class="dialog-info">
+        <div class="dialog-info">
           <svg class="floppy-logo" viewBox="0 0 39 39">
-  <use href="./svg/floppy.svg#floppy"></use>
-</svg>
-        <span class="button__text">Вставьте дискету, чтобы продолжить</span>
-      </div>
-      <button class="save--dialog-button"> <span class="button__text">ok</span></button>
-    </dialog>
+            <use class="floppy-logo-use" href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Вставьте дискету, чтобы продолжить</span>
+        </div>
+        <button class="save-dialog-button" 
+        type="button" 
+    onclick="window['save-dialog-id'].close()">
+          <span class="button__text">ok</span>
+        </button>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
-
