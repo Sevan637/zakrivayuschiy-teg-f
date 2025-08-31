@@ -20,11 +20,10 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  min-inline-size: 375px; 
   font-size: var(--font-size);
 }
 
-.header, .main {
+.header, .main, footer {
   inline-size: var(--section-inline-size);
 
 }
@@ -43,7 +42,7 @@
   margin: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem) auto;
 }
 
-.main {
+.main, .footer {
   margin: 0 auto;
 }
 
@@ -110,17 +109,40 @@
   all: initial;
   inline-size: 130px;
   block-size: 38px;
-  border: 2px solid #000;
+  border: var(--border);
 }
 
 .card__icon-button {
   all: initial; 
-  
 }
 
 .button__text {
   display: inline-block;
   font-family: var(--PressStart2P-Regular), sans-serif;
   font-size: var(--custom-font-size);
+}
+
+.card__like-button .button__text {
   margin: 12.5px 37px; 
+}
+
+.save-button {
+  all: initial; 
+  border: var(--border);
+  margin: 52px auto 100px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 17px;
+  background-color: var(--background-color);
+  
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+}
+.floppy-logo {
+  inline-size: 28px;
+  block-size: 28px;
 }
