@@ -22,7 +22,6 @@
   background-position: center;
   font-size: var(--font-size);
 }
-
 .header,
 .main,
 footer {
@@ -35,6 +34,7 @@ footer {
   border: var(--border);
   background-color: var(--background-color);
 }
+
 
 .logo {
   display: block;
@@ -110,11 +110,77 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .card__icon-button {
   all: initial;
+  inline-size: 39px;
+  block-size: 38px;
+  transition: border 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
+
+.card__icon-button:focus {
+  border: none;
+}
+.card__icon-button:focus-visible {
+  border: 2px solid rgba(0, 0, 0, 1);
+  inline-size: 38px;
+  overflow: hidden;
+  block-size: 38px;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+  transform-origin: center;
+}
+
+.countour {
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  transition: opacity 0.3s linear, fill 0.3s 0.05s linear;
+}
+
+.core {
+  transition: opacity 0.3s 0.03s linear, fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+
+.like-icon:hover .heart path:not(.contour) {
+  opacity: 1;
+  fill: var(--main-color);
+
+}
+
+.like-icon:active .heart path:not(.contour) {
+  opacity: 1;
+  fill: var(--animation-color);
+}
+
+.like-icon.is-liked .heart path:not(.contour) {
+  opacity: 1;
+  fill: var(--animation-color);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 10s 0.06s linear;
+  fill: var(--animation-color);
+
+}
+
+
 
 .button__text {
   display: inline-block;
@@ -139,24 +205,27 @@ footer {
 }
 
 .perfect {
-   filter: brightness(1000%) contrast(1000%) saturate(1000%);
+  filter: brightness(1000%) contrast(1000%) saturate(1000%);
 }
 
 .friends {
-  filter: brightness(140%) blur(3px) contrast(110%) saturate(120%) hue-rotate(30deg);
+  filter: brightness(140%) blur(3px) contrast(110%) saturate(120%)
+    hue-rotate(30deg);
 }
 
 .ideas {
-filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180deg);
-
+  filter: brightness(140%) blur(2px) contrast(110%) saturate(120%)
+    hue-rotate(180deg);
 }
 
 .desperation {
- filter: brightness(150%) saturate(200%) hue-rotate(-90deg) sepia(80%) grayscale(0.4);
+  filter: brightness(150%) saturate(200%) hue-rotate(-90deg) sepia(80%)
+    grayscale(0.4);
 }
 
 .road {
-  filter: brightness(1000%) blur(5px) contrast(1000%) saturate(1000%) invert(0.7);
+  filter: brightness(1000%) blur(5px) contrast(1000%) saturate(1000%)
+    invert(0.7);
 }
 
 .footer {
@@ -173,6 +242,7 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
   gap: 8px;
   padding: 20px 17px;
   background-color: var(--background-color);
+  cursor: pointer;
 }
 
 .save-button .floppy-logo {
@@ -205,7 +275,7 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
 }
 
 .save-dialog-button {
-  all: initial; 
+  all: initial;
   border: var(--border);
   inline-size: 293px;
   block-size: 38px;
@@ -213,24 +283,23 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
   justify-content: center;
   align-items: center;
   margin: auto auto 30px;
+  cursor: pointer;
 }
 
 .transition-style {
   transition: box-shadow 0.3s ease;
   position: relative;
   background-color: var(--background-color);
-} 
-
+}
 
 .transition-style::after {
-  content: '';
+  content: "";
   background-color: var(--main-color);
   position: absolute;
   inset: 0;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.5s ease-in-out;
-  
 }
 
 .transition-style:hover::after {
@@ -238,13 +307,14 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
 }
 
 .transition-style:focus {
-  
   box-shadow: 2px 2px var(--main-color);
-
 }
 
 .floppy-logo {
-  fill: var(--background-color);
+  position: relative;
+  color: var(--background-color);
+  mix-blend-mode: difference;
+  z-index: 2;
 }
 
 @media (width <= 375px) {
@@ -253,8 +323,7 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
   }
 
   .save-button .floppy-logo {
-  inline-size: 28px;
-  block-size: 28px;
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
-}
-
