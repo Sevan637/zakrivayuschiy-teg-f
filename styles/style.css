@@ -112,34 +112,6 @@ footer {
   justify-content: center;
 }
 
-.transition-style {
-  transition: box-shadow 0.3s ease;
-  position: relative;
-  background-color: var(--background-color);
-} 
-
-
-.transition-style::after {
-  content: '';
-  background-color: var(--main-color);
-  position: absolute;
-  inset: 0;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.5s ease-in-out;
-  
-}
-
-.transition-style:hover::after {
-  transform: scaleX(1);
-}
-
-.transition-style:focus {
-  
-  box-shadow: 2px 2px var(--main-color);
-
-}
-
 .card__icon-button {
   all: initial;
 }
@@ -204,8 +176,8 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
 }
 
 .save-button .floppy-logo {
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 .save-dialog {
@@ -243,8 +215,46 @@ filter: brightness(140%) blur(2px) contrast(110%) saturate(120%) hue-rotate(180d
   margin: auto auto 30px;
 }
 
+.transition-style {
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  background-color: var(--background-color);
+} 
+
+
+.transition-style::after {
+  content: '';
+  background-color: var(--main-color);
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.transition-style:hover::after {
+  transform: scaleX(1);
+}
+
+.transition-style:focus {
+  
+  box-shadow: 2px 2px var(--main-color);
+
+}
+
+.floppy-logo {
+  fill: var(--background-color);
+}
+
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
   }
+
+  .save-button .floppy-logo {
+  inline-size: 28px;
+  block-size: 28px;
 }
+}
+
