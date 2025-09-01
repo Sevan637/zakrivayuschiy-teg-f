@@ -1,6 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --PressStart2P-Regular: 'PressStart2P-Regular.woff';
+  --PressStart2P-Regular: 'PressStart2P';
   --Inter-Variable: 'Inter-Variable.woff2';
   --text-weight: 410;
   --heading-weight: 715;

@@ -29,7 +29,6 @@ footer {
 }
 
 .header {
-  min-block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
   margin: 100px auto;
   border: var(--border);
   background-color: var(--background-color);
@@ -59,15 +58,23 @@ footer {
 
 .card-title {
   font-variation-settings: "wght" var(--heading-weight);
+  font-size: var(--standart-font-size);
   margin: 4px 10px;
+  line-height: 100%;
+
 }
 
 .picture-box {
   position: relative;
+  border-bottom: var(--border);
+  border-top: var(--border);
 }
 
 .card-picture {
+  display: block;
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .text__label {
@@ -115,7 +122,7 @@ footer {
 
 .card__icon-button {
   all: initial;
-  inline-size: 39px;
+  inline-size: 38px;
   block-size: 38px;
   transition: border 0.3s ease;
   display: flex;
@@ -123,6 +130,7 @@ footer {
   justify-content: center;
   border: 2px solid rgba(0, 0, 0, 0);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .card__icon-button:focus {
@@ -130,9 +138,6 @@ footer {
 }
 .card__icon-button:focus-visible {
   border: 2px solid rgba(0, 0, 0, 1);
-  inline-size: 38px;
-  overflow: hidden;
-  block-size: 38px;
 }
 
 .like-icon {
