@@ -135,6 +135,7 @@ footer {
 
 .card__icon-button:focus {
   border: none;
+  outline: none;
 }
 .card__icon-button:focus-visible {
   border: 2px solid rgba(0, 0, 0, 1);
@@ -151,17 +152,18 @@ footer {
 }
 
 .main-body {
+  fill: transparent;
   transition: opacity 0.3s linear, fill 0.3s 0.05s linear;
 }
 
 .core {
+  fill: transparent
   transition: opacity 0.3s 0.03s linear, fill 0.3s linear;
 }
 
 .sparks {
   opacity: 0;
 }
-
 
 .like-icon:hover .heart path:not(.contour) {
   opacity: 1;
