@@ -140,7 +140,7 @@
 
 .card__icon-button {
   border: none;
-  inline-size: 39px;
+  inline-size: 38px;
   block-size: 38px;
   transition: border 0.3s ease;
   display: flex;
@@ -156,10 +156,13 @@
   outline: none;
 }
 .card__icon-button:focus-visible {
+  inline-size: 39px;
+  block-size: 38px;
   border: 2px solid rgba(0, 0, 0, 1);
 }
 
 .like-icon {
+  flex-shrink: 0;
   inline-size: 39px;
   block-size: 36px;
 }
