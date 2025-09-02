@@ -24,7 +24,7 @@
 }
 .header,
 .main,
-footer {
+.dilog-section {
   inline-size: var(--section-inline-size);
 }
 
@@ -34,16 +34,28 @@ footer {
   background-color: var(--background-color);
 }
 
+.main-title {
+  font-family: var(--PressStart2P-Regular), sans-serif;
+  line-height: 100%;
+  text-align: center;
+}
 
-.logo {
-  display: block;
-  inline-size: clamp(21.438rem, 18.973rem + 10.52vw, 28.438rem);
-  block-size: clamp(5.188rem, 4.637rem + 2.35vw, 6.75rem);
-  margin: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem) auto;
+.logo-title {
+  font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+  margin-left: clamp(1rem, -1.344rem + 10vw, 7.656rem);
+  margin-right: clamp(1rem, -1.344rem + 10vw, 7.656rem);
+  margin-top: clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem);
+  margin-bottom: 20px;
+
+}
+
+.subtitle {
+  font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
+  margin-bottom: clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem);
 }
 
 .main,
-.footer {
+.dilog-section {
   margin: 0 auto;
 }
 
@@ -61,7 +73,10 @@ footer {
   font-size: var(--standart-font-size);
   margin: 4px 10px;
   line-height: 100%;
+}
 
+.card-text {
+  font-size: var(--standart-font-size);
 }
 
 .picture-box {
@@ -144,7 +159,6 @@ footer {
 .like-icon {
   inline-size: 39px;
   block-size: 36px;
-  transform-origin: center;
 }
 
 .countour {
@@ -153,31 +167,43 @@ footer {
 
 .main-body {
   fill: transparent;
-  transition: opacity 0.3s linear, fill 0.3s 0.05s linear;
+  transition: fill 0.3s linear;
 }
 
 .core {
-  fill: transparent
-  transition: opacity 0.3s 0.03s linear, fill 0.3s linear;
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .sparks {
   opacity: 0;
 }
 
-.like-icon:hover .heart path:not(.contour) {
-  opacity: 1;
+.like-icon:hover .core {
   fill: var(--main-color);
-
 }
 
-.like-icon:active .heart path:not(.contour) {
-  opacity: 1;
+.like-icon:hover .main-body {
+  fill: var(--main-color);
+}
+
+.like-icon:active .core {
+  animation: fill 0.3s linear;;
   fill: var(--animation-color);
 }
 
-.like-icon.is-liked .heart path:not(.contour) {
-  opacity: 1;
+.like-icon:active .main-body {
+  animation: fill 0.3s 0.05s linear;
+  fill: var(--animation-color);
+}
+
+.like-icon.is-liked .core {
+  animation: fill 0.3s linear;;
+  fill: var(--animation-color);
+}
+
+.like-icon.is-liked .main-body {
+  animation: fill 0.3s 0.05s linear;
   fill: var(--animation-color);
 }
 
@@ -186,7 +212,7 @@ footer {
   fill: var(--animation-color);
 }
 
-.like-icon.is-liked .heart {
+.like-icon.is-liked {
   transform-origin: center;
   animation: heart-scale 0.3s 0.1s 1 ease-in;
 }
@@ -210,39 +236,39 @@ footer {
   margin: 12.5px 37px;
 }
 
-.fear {
+.filter-fear {
   filter: brightness(50%) contrast(200%) saturate(250%);
 }
 
-.victory {
+.filter-victory {
   filter: brightness(150%) saturate(200%);
 }
 
-.perfect {
+.filter-perfect {
   filter: brightness(1000%) contrast(1000%) saturate(1000%);
 }
 
-.friends {
+.filter-friends {
   filter: brightness(140%) blur(3px) contrast(110%) saturate(120%)
     hue-rotate(30deg);
 }
 
-.ideas {
+.filter-ideas {
   filter: brightness(140%) blur(2px) contrast(110%) saturate(120%)
     hue-rotate(180deg);
 }
 
-.desperation {
+.filter-desperation {
   filter: brightness(150%) saturate(200%) hue-rotate(-90deg) sepia(80%)
     grayscale(0.4);
 }
 
-.road {
+.filter-road {
   filter: brightness(1000%) blur(5px) contrast(1000%) saturate(1000%)
     invert(0.7);
 }
 
-.footer {
+.dilog-section {
   display: grid;
   justify-content: center;
 }
