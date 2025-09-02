@@ -135,7 +135,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: 8px;
+  margin-left: 7px;
 }
 
 .card__icon-button {
@@ -156,8 +156,6 @@
   outline: none;
 }
 .card__icon-button:focus-visible {
-  inline-size: 39px;
-  block-size: 38px;
   border: 2px solid rgba(0, 0, 0, 1);
 }
 
