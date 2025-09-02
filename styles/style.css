@@ -20,7 +20,6 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  font-size: var(--font-size);
 }
 .header,
 .main,
@@ -46,12 +45,13 @@
   margin-right: clamp(1rem, -1.344rem + 10vw, 7.656rem);
   margin-top: clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem);
   margin-bottom: 20px;
-
+  text-transform: uppercase;
 }
 
 .subtitle {
   font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
   margin-bottom: clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem);
+  text-transform: uppercase;
 }
 
 .main,
@@ -72,11 +72,14 @@
   font-variation-settings: "wght" var(--heading-weight);
   font-size: var(--standart-font-size);
   margin: 4px 10px;
-  line-height: 100%;
+  line-height: 122%;
+  letter-spacing: 0;
 }
 
 .card-text {
   font-size: var(--standart-font-size);
+  line-height: 21px;
+  letter-spacing: 0;
 }
 
 .picture-box {
@@ -120,7 +123,6 @@
 
 .button-group {
   display: flex;
-  gap: 12px;
   justify-content: flex-end;
 }
 
@@ -133,19 +135,20 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-left: 12px;
 }
 
 .card__icon-button {
-  all: initial;
-  inline-size: 38px;
+  border: none;
+  inline-size: 39px;
   block-size: 38px;
   transition: border 0.3s ease;
   display: flex;
   align-items: center;
+  background-color: inherit;
   justify-content: center;
   border: 2px solid rgba(0, 0, 0, 0);
   cursor: pointer;
-  overflow: hidden;
 }
 
 .card__icon-button:focus {
@@ -188,7 +191,7 @@
 }
 
 .like-icon:active .core {
-  animation: fill 0.3s linear;;
+  animation: fill 0.3s linear;
   fill: var(--animation-color);
 }
 
@@ -198,7 +201,7 @@
 }
 
 .like-icon.is-liked .core {
-  animation: fill 0.3s linear;;
+  animation: fill 0.3s linear;
   fill: var(--animation-color);
 }
 
@@ -214,19 +217,20 @@
 
 .like-icon.is-liked {
   transform-origin: center;
-  animation: heart-scale 0.3s 0.1s 1 ease-in;
+  animation: heart-scale 0.3s 0.1s 1 ease-in backwards;
 }
 
 .like-icon.is-liked .sparks {
   transform-origin: center;
-  animation: sparks-lighting 0.3s 0.3s 1 ease-in;
-} 
+  animation: sparks-lighting 0.3s 0.3s 1 ease-in backwards;
+}
 
 .button__text {
   display: inline-block;
   font-family: var(--PressStart2P-Regular), sans-serif;
   font-size: var(--custom-font-size);
   position: relative;
+  line-height: 100%;
   color: var(--background-color);
   mix-blend-mode: difference;
   z-index: 2;
@@ -312,6 +316,16 @@
   flex-shrink: 0;
   inline-size: 39px;
   block-size: 39px;
+}
+
+.dialog-text {
+  font-family: var(--PressStart2P-Regular), sans-serif;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.text-transform-style {
+  text-transform: uppercase;
 }
 
 .save-dialog-button {
