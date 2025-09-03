@@ -28,7 +28,7 @@
 }
 
 .header {
-  margin: 100px auto;
+  margin: 100px auto 96px;
   border: var(--border);
   background-color: var(--background-color);
 }
@@ -36,21 +36,23 @@
 .main-title {
   font-family: var(--PressStart2P-Regular), sans-serif;
   line-height: 100%;
+  letter-spacing: 0;
   text-align: center;
+  font-weight: normal;
 }
 
 .logo-title {
   font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
   margin-left: clamp(1rem, -1.344rem + 10vw, 7.656rem);
   margin-right: clamp(1rem, -1.344rem + 10vw, 7.656rem);
-  margin-top: clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem);
-  margin-bottom: 20px;
+  margin-top: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem);
+  margin-bottom: 22px;
   text-transform: uppercase;
 }
 
 .subtitle {
   font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
-  margin-bottom: clamp(7.625rem, 7.449rem + 0.75vw, 8.125rem);
+  margin-bottom: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem);
   text-transform: uppercase;
 }
 
@@ -65,7 +67,7 @@
 }
 
 .card:not(:last-of-type) {
-  margin-bottom: 54px;
+  margin-bottom: 50px;
 }
 
 .card-title {
@@ -84,13 +86,15 @@
 
 .picture-box {
   position: relative;
-  border-bottom: var(--border);
-  border-top: var(--border);
-}
+   border-bottom: var(--border); 
+  border-top: var(--border); 
+  block-size: clamp(23.438rem, 16.307rem + 30.42vw, 43.688rem);
+} 
 
 .card-picture {
   display: block;
   inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -128,8 +132,8 @@
 
 .card__like-button {
   all: initial;
-  inline-size: 130px;
-  block-size: 38px;
+  inline-size: 128px;
+  block-size: 35px;
   border: var(--border);
   display: flex;
   align-items: center;
@@ -140,8 +144,8 @@
 
 .card__icon-button {
   border: none;
-  inline-size: 38px;
-  block-size: 38px;
+  inline-size: 37px;
+  block-size: 37px;
   transition: border 0.3s ease;
   display: flex;
   align-items: center;
@@ -184,10 +188,12 @@
 }
 
 .like-icon:hover .core {
+  transition: fill 0.3s linear;
   fill: var(--main-color);
 }
 
 .like-icon:hover .main-body {
+  transition: fill 0.3s 0.05s linear;
   fill: var(--main-color);
 }
 
@@ -218,12 +224,12 @@
 
 .like-icon.is-liked {
   transform-origin: center;
-  animation: heart-scale 0.3s 0.1s 1 ease-in backwards;
+  animation: heart-scale 0.3s 0.1s 1 ease-in;
 }
 
 .like-icon.is-liked .sparks {
   transform-origin: center;
-  animation: sparks-lighting 0.3s 0.3s 1 ease-in backwards;
+  animation: sparks-lighting 0.3s 0.3s 1 ease-in;
 }
 
 .button__text {
@@ -241,34 +247,34 @@
   margin: 12.5px 37px;
 }
 
-.filter-fear {
+.brightness {
   filter: brightness(50%) contrast(200%) saturate(250%);
 }
 
-.filter-victory {
+.saturate {
   filter: brightness(150%) saturate(200%);
 }
 
-.filter-perfect {
+.contrast {
   filter: brightness(1000%) contrast(1000%) saturate(1000%);
 }
 
-.filter-friends {
+.blur {
   filter: brightness(140%) blur(3px) contrast(110%) saturate(120%)
     hue-rotate(30deg);
 }
 
-.filter-ideas {
+.hue-rotate {
   filter: brightness(140%) blur(2px) contrast(110%) saturate(120%)
     hue-rotate(180deg);
 }
 
-.filter-desperation {
+.sepia {
   filter: brightness(150%) saturate(200%) hue-rotate(-90deg) sepia(80%)
     grayscale(0.4);
 }
 
-.filter-road {
+.invert {
   filter: brightness(1000%) blur(5px) contrast(1000%) saturate(1000%)
     invert(0.7);
 }
@@ -285,7 +291,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 20px 17px;
+  padding: 15px 17px;
   background-color: var(--background-color);
   cursor: pointer;
 }
@@ -321,7 +327,8 @@
 
 .dialog-text {
   font-family: var(--PressStart2P-Regular), sans-serif;
-  line-height: 100%;
+  line-height: 150%;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -375,7 +382,7 @@
   z-index: 2;
 }
 
-@media (width <= 375px) {
+@media (width <= 376px) {
   .save-button {
     flex-direction: column;
   }
